@@ -37,8 +37,9 @@ tasks.named('test') {
 
 
 node {
-    version = "14.16.0"
-    npmVersion = "7.8.0"
+    nodeProjectDir = file("${projectDir}/front-end")
+    version = '18.1.0'
+    npmVersion = '8.8.0'
     download = true
 }
 
@@ -47,12 +48,12 @@ task npmBuild(type: NpmTask) {
 }
 
 task copyFrontEnd(type: Copy) {
-    from "$projectDir/front-end/static"
+    from "${projectDir}/front-end/static"
     into 'build/resources/main/static/.'
 }
 
 task cleanFrontEnd(type: Delete) {
-    delete "$projectDir/front-end/static", "$projectDir/front-end/node_modules"
+    delete "${projectDir}/front-end/static", "${projectDir}/front-end/node_modules"
 }
 
 npmBuild.dependsOn npmInstall
