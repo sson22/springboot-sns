@@ -37,7 +37,7 @@ tasks.named('test') {
 
 
 node {
-    nodeProjectDir = file("$projectDir/front-end")
+    nodeProjectDir = file("${project.projectDir}/front-end")
     version = '18.1.0'
     download = true
 }
