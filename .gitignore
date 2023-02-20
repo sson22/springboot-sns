@@ -279,3 +279,5 @@ gradle-app.setting
 **/node_modules/**
 front-end/static/**
 system.properties
+
+.env
