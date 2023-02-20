@@ -278,4 +278,5 @@ gradle-app.setting
 
 **/node_modules/**
 front-end/static/**
+front-end/src/assets/**
 *.properties
