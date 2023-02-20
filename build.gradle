@@ -39,7 +39,6 @@ tasks.named('test') {
 node {
     nodeProjectDir = file("${projectDir}/front-end")
     version = '18.1.0'
-    npmVersion = '8.8.0'
     download = true
 }
 
